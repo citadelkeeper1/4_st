@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+    Список курсов
+{% endblock %}
+{% block style %}
+    {% include "inc/style.html" %}
+{% endblock %}
+{% block menu %}
+    {% include "inc/menu.html" %}
+{% endblock %}
+{% block body %}
+    <div class="page-header">
+        <h2>Курсы и категории</h2>
+    </div>
+    <br>
+
+    <div class="inner-field">
+        <div class="page-subheader">
+            <h4>Список курсов для категории "{{ name }}"</h4>
+        </div>
+
+        {% if objects_list %}
+            <br>
+            <table class="table table-hover">
+
+                {% for item in objects_list %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td><span><a href="/copy-course/?name={{ item.name }}">скопировать</a></span></td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        {% else %}
+            <span>Курсы отсутствуют</span>
+        {% endif %}
+        <br>
+        <a class="btn btn-primary" href="/create-course/?id={{ id }}" role="button">Создать новый курс</a>
+        <a class="btn btn-secondary" href="/courses/" role="button">Назад к списку категорий</a>
+    </div>
+{% endblock %}
+{% block footer %}
+    {% include "inc/footer.html" %}
+{% endblock %}

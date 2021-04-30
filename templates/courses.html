@@ -1,0 +1,47 @@
+﻿{% extends "base.html" %}
+{% block title %}
+    Курсы и категории
+{% endblock %}
+{% block style %}
+    {% include "inc/style.html" %}
+{% endblock %}
+{% block menu %}
+    {% include "inc/menu.html" %}
+{% endblock %}
+{% block body %}
+    <div class="page-header">
+        <h2>Курсы и категории</h2>
+    </div>
+    <br>
+
+    <div class="inner-field">
+        <div class="page-subheader">
+            <h4>Список категорий</h4>
+        </div>
+
+        {% if objects_list %}
+            <br>
+            <table class="table table-hover">
+                {% for item in objects_list %}
+                    <tr>
+
+                        <td>{{ item.name }}</td>
+
+                        <td><span>Количество курсов: {{ item.course_count() }}</span></td>
+
+                        <td><a href="/courses-list/?id={{ item.id }}">Показать курсы</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <span>Категории отсутствуют</span>
+        {% endif %}
+
+        <br><br>
+        <a class="btn btn-primary" href="/create-category/" role="button">Создать новую категорию</a>
+    </div>
+
+{% endblock %}
+{% block footer %}
+    {% include "inc/footer.html" %}
+{% endblock %}

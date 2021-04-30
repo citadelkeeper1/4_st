@@ -6,7 +6,6 @@ from fw.auth import login
 # front controllers
 def front_add_date(request):
     request['date'] = date.today()
-    request['time'] = datetime.now()
 
 
 def front_add_key(request):
@@ -25,6 +24,12 @@ front_controllers = [front_add_date, front_add_key, front_request_allowed]
 
 routes = {
     '/': Index(),
-    '/contact/': Contact(),
-    '/about/': About()
+    '/courses/': Courses(),
+    '/about/': About(),
+    '/study_programs/': StudyPrograms(),
+    '/courses-list/': CoursesList(),
+    '/create-course/': CreateCourse(),
+    '/create-category/': CreateCategory(),
+    '/category-list/': CategoryList(),
+    '/copy-course/': CopyCourse()
 }
