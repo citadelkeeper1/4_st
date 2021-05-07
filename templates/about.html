@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        .image {
-                position	: relative;
-                width		: 100%; /* for IE 6 */
-        }
+﻿{% extends "base.html" %}
+{% block title %}
+    О нас
+{% endblock %}
+{% block style %}
+    {% include "inc/style.html" %}
+{% endblock %}
+{% block menu %}
+    {% include "inc/menu.html" %}
+{% endblock %}
+{% block body %}
 
-        h2 {
-            position	: absolute;
-            top		: 50px;
-            left		: 100px;
-            width		: 100%;
-            font-size: 30px;
-            color: #ffffff;
-        }
+    <h1>О нас</h1>
+    <p>
+        Добро пожаловать на портал образовательной платформы Linuxoid.
+        Для вас работают лучшие специалисты в области Linux-систем.
+        Наша платформа предоставляет обучение по следующим направлениям:
+    <ul>
+        <li>Администрирование linux-систем</li>
+        <li>Программирование в linux</li>
+        <li>HA-кластеры</li>
+        <li>Информационная безопасность</li>
+        <li>Архитектура сетей</li>
+    </ul>
+    </p>
 
-    </style>
-    <title>О нас</title>
-</head>
-<body>
-    <div class="image">
-        <img src="https://cdn.pixabay.com/photo/2016/11/29/12/13/fence-1869401_960_720.jpg">
-        <h2>Спасибо, что пользуетесь нашими услугами</h2>
-    </div>
-</body>
-</html>
-
-
+{% endblock %}
+{% block footer %}
+    {% include "inc/footer.html" %}
+{% endblock %}
