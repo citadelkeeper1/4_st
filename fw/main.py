@@ -37,7 +37,7 @@ class Framework:
             view = self.routes_lst[path]
         else:
             view = PageNotFound404()
-        request = {}
+        # request = {}
         for front in self.fronts_lst:
             front(request)
         code, body = view(request)
