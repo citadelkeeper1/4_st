@@ -1,5 +1,4 @@
 class PostReqs:
-
     @staticmethod
     def get_input_dict(data: str):
         result = {}
@@ -30,7 +29,6 @@ class PostReqs:
 
 
 class GetReqs:
-
     @staticmethod
     def get_input_dict(data: str):
         result = {}

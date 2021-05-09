@@ -116,7 +116,6 @@ class Engine:
 
 
 class SingletonByName(type):
-
     def __init__(cls, name, bases, attrs, **kwargs):
         super().__init__(name, bases, attrs)
         cls.__instance = {}
@@ -135,7 +134,6 @@ class SingletonByName(type):
 
 
 class Logger(metaclass=SingletonByName):
-
     def __init__(self, name):
         self.name = name
 
