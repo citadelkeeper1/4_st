@@ -22,14 +22,14 @@ def front_request_allowed(request):
 
 front_controllers = [front_add_date, front_add_key, front_request_allowed]
 
-routes = {
-    '/': Index(),
-    '/courses/': Courses(),
-    '/about/': About(),
-    '/study_programs/': StudyPrograms(),
-    '/courses-list/': CoursesList(),
-    '/create-course/': CreateCourse(),
-    '/create-category/': CreateCategory(),
-    '/category-list/': CategoryList(),
-    '/copy-course/': CopyCourse()
-}
+# routes = {
+#     '/': Index(),
+#     '/courses/': Courses(),
+#     '/about/': About(),
+#     '/study_programs/': StudyPrograms(),
+#     '/courses-list/': CoursesList(),
+#     '/create-category/': CreateCategory(),
+#     '/create-course/': CreateCourse(),
+#     '/category-list/': CategoryList(),
+#     '/copy-course/': CopyCourse()
+# }
